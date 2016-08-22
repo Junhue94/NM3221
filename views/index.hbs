@@ -1,1 +1,101 @@
-sadasda
+<header id="chat-container">
+    <!--Container-->
+    <div class="row column expanded">
+        <!--User Login-->
+        <div id="login-window" class="center-div">
+            <div id="login-title" class="row expanded">
+                <div class="small-12 medium-6 large-4 medium-centered columns">
+                    <div class="callout">
+                        <p>NM3221</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error-layout" class="row expanded">
+                <div class="small-12 medium-6 large-4 medium-centered columns">
+                    <div class="callout">
+                        <p id="error-message"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login-input" class="row expanded">
+                <div class="small-12 medium-6 large-4 medium-centered columns">
+                    <form id="user-form">
+                        <div class="callout">
+                            <label>Name
+                                <input id="user-name" name="user-name" type="text" autocomplete="off">
+                            </label>
+                            <label>Matric No.
+                                <input id="user-matric-no" name="user-matric-no" type="text" autocomplete="off">
+                            </label>
+                            <button class="button" type="submit">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Chat Layout-->
+        <div id="chat-layout" class="row">
+            <!--User List-->
+            <div class="medium-5 large-3 columns">
+                <!--User Details / New Issue-->
+                <div class="callout">
+                    <div id="user-details">
+                        <div>
+                            <span><b>User : </b></span>
+                            <span id="user-details-name"></span>
+                        </div>
+                        <div>
+                            <span><b>Matric No :</b></span>
+                            <span id="user-details-matric-no"></span>
+                        </div>
+                        <button id="new-issue" class="button" data-open="new-issue-form">New Issue</button>
+
+                        <form id="new-issue-form" class="reveal"  data-reveal>
+                            <p>What's in your mind?</p>
+                            <div class="input-group">
+                                <input id="new-issue-title" class="input-group-field" type="text" autocomplete="off">
+                                <div class="input-group-button">
+                                    <input id="new-issue-create" type="submit" class="button" value="Create" disabled>
+                                </div>
+                            </div>
+                            <button id="new-issue-close" class="close-button" data-close aria-label="Close modal" type="button">
+                                <span class="times-color" aria-hidden="true">&times;</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div id="connected-users-list" class="callout">
+                    <ul class="vertical menu" data-accordion-menu>
+                        <li><a style="display: none;"></a></li>
+                        <li>
+                            <a id="no-of-connected-users">
+                                <span><i class="fa fa-plug" aria-hidden="true"></i></span>
+                                <span>All Users</span>
+                                <span id="no-of-users" class="label float-right"></span>
+                            </a>
+                            <ul id="user-list" class="menu vertical nested is-active"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Chat Box-->
+            <div id="chat-box" class="medium-7 large-9 columns">
+                <div id="issue-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--JQuery-->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <!--JQuery Validation-->
+    <script src="/node_modules/jquery-validation/dist/jquery.validate.js"></script>
+    <!--Socket IO-->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--Custom JS-->
+    <script src="/js/index.js"></script>
+
+</header>

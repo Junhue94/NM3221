@@ -1,0 +1,44 @@
+#error_page {
+    .columns {
+        padding: 20px 10px;
+    }
+
+    .err-msg {
+        color: white;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .err-status {
+        color: white;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+
+    .err-stack {
+        color: white;
+    }
+
+    .center-div {
+        margin: 0;
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        p {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .callout {
+        background: transparent;
+        border: 3px solid white;
+        border-radius: 5px;
+    }
+}

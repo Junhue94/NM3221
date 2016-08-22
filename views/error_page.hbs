@@ -1,0 +1,16 @@
+<header id="error_page">
+    <div class="row expanded">
+        <div class="medium-12 columns">
+            <p class="err-msg">{{message}}</p>
+            <p class="err-status">{{error.status}}</p>
+            <pre class="err-stack">{{error.stack}}</pre>
+
+            {{#if message_prod}}
+                <div class="callout center-div">
+                    <p class="err-msg-prod">{{message_prod}}</p>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</header>
+

@@ -1,0 +1,310 @@
+#chat-container {
+    padding: 30px 0;
+
+    .center-div {
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #login-window {
+        //display: none;
+
+        .callout {
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            color: white;
+        }
+
+        #login-title {
+            p {
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+
+        #error-layout {
+            .callout {
+                padding: 10px;
+                border: 2px #ff4b43 solid;
+                color: #ff9a94;
+                text-align: center;
+            }
+        }
+
+        #login-input {
+            label {
+                color: white;
+                margin: 0 0 20px 0;
+                font-size: 1rem;
+
+                input {
+                    margin: 0;
+                    height: 100%;
+                    font-size: 0.9rem;
+                    background: transparent;
+                    color: white;
+                    border-radius: 5px;
+                }
+
+                label {
+                    font-size: 0.9rem;
+                    font-style: italic;
+                    color: #ff604b;
+                }
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background: white;
+                color: black;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                background: #00ffee;
+            }
+        }
+    }
+
+    #chat-layout, #error-layout {
+        display: none;
+
+        .callout {
+            background: transparent;
+            color: white;
+            border: 2px solid #c6ffae;
+            border-radius: 5px;
+        }
+
+        #user-details {
+            div {
+                margin: 0 0 16px 0;
+            }
+        }
+
+        #connected-users-list.callout {
+            padding: 0;
+            border: 2px solid #ff736f;
+
+            ul {
+                li {
+                    a {
+                        border-bottom: 2px solid #ff736f;
+
+                        span {
+                            color: white;
+                            font-size: 1.1rem;
+
+                            i {
+                                font-size: 0.9rem;
+                                margin: 0 10px 0 0;
+                            }
+                        }
+
+                        span.label {
+                            margin: 0 20px 0 0;
+                        }
+                    }
+
+                    a:after {
+                        border-color: #00fff6 transparent transparent;
+                    }
+
+                    ul {
+                        padding: 0 0 6px 0;
+                        li {
+                            p {
+                                padding: 6px 16px 0 16px;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .label {
+                padding: 3px 8px;
+                font-size: 0.7rem;
+                font-weight: bold;
+                background: #e5be87;
+                color: black;
+                border-radius: 5px;
+            }
+        }
+
+        button {
+            padding: 8px;
+            width: 100%;
+            margin: 0;
+            background: #c6ffb8;
+            color: black;
+            font-weight: bold;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #7fdf75;
+        }
+
+        #chat-box {
+            ul {
+                background: transparent;
+
+                li {
+                    a:hover {
+                        color: #ffffff;
+                        background: rgba(255, 255, 255, 0.08);
+                        border: 2px solid #bcbcbc;
+                    }
+
+                    a:before {
+                        content: none;
+                    }
+
+                    a.accordion-title::after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: inset 6px;
+                        border-color: #00fff6 transparent transparent;
+                        border-top-style: solid;
+                        border-bottom-width: 0;
+                        position: absolute;
+                        top: 50%;
+                        margin: -4px;
+                        right: 1rem;
+                    }
+
+                    a[aria-expanded='true'].accordion-title::after {
+                        -webkit-transform-origin: 50% 50%;
+                        -ms-transform-origin: 50% 50%;
+                        transform-origin: 50% 50%;
+                        -webkit-transform: scaleY(-1);
+                        -ms-transform: scaleY(-1);
+                        transform: scaleY(-1);
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0 25px 0 0;
+                        font-size: 0.9rem;
+                    }
+
+                    .accordion-title {
+                        padding: 10px;
+                        font-size: 0.8rem;
+                        line-height: 1.5;
+                        border: 2px white solid;
+                        color: white;
+
+                        p {
+                            text-align: justify;
+                        }
+                    }
+
+                    .accordion-content {
+                        background: transparent;
+                        border: 2px solid white;
+                    }
+
+                    .message-list {
+                        p.message-list-user {
+                            color: #6ffffc;
+                            padding: 0;
+                            font-size: 0.9rem;
+                            line-height: 1;
+                            font-weight: bold;
+                        }
+
+                        p.message-list-comment {
+                            margin: 0 0 10px 0;
+                            padding: 0;
+                            text-align: justify;
+                            color: #c0c0c0;
+                            font-size: 0.9rem;
+                            line-height: 2;
+                        }
+                    }
+
+                    #message-form {
+                        .input-group, .input-group-button {
+                            margin: 0;
+                        }
+
+                        input.message-input {
+                            height: 100%;
+                            font-size: 0.9rem;
+                            padding: 5px 8px;
+                        }
+
+                        input.send-message {
+                            color: black;
+                            font-weight: bold;
+                            background: #5ce8e6;
+                            padding: 7px;
+                            font-size: 0.8rem;
+                        }
+
+                        input.send-message:disabled {
+                            @extend input.send-message;
+                            opacity: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#new-issue-form {
+    background: white;
+    border: 3px solid #00cfe3;
+
+    .times-color {
+        color: #ff9e94;
+    }
+
+    .times-color:hover {
+        color: #ff5245;
+    }
+
+    .input-group, .input-group-button {
+        margin: 0;
+    }
+
+    p {
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    input#new-issue-title {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+        height: 100%;
+    }
+
+    input#new-issue-create {
+        color: black;
+        font-weight: bold;
+        background: #5ce8e6;
+        padding: 7px;
+        font-size: 0.85rem;
+    }
+
+    input#new-issue-create:disabled {
+        @extend input.send-message;
+        opacity: 0.3;
+    }
+}

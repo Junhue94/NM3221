@@ -1,0 +1,8 @@
+#layout_main, #layout_error, #layout_dash {
+    background: url("../images/background/board.jpg") fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-y: scroll;
+}

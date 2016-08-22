@@ -1,0 +1,11 @@
+<header id="dash-ints">
+    <div class="row new-container">
+        <div class="medium-12 columns">
+            {{#each unique_dates}}
+                <div onclick="location.href='/dashboard/interactions/{{date_url}}'" class="callout">
+                    <p>{{date}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</header>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <!--Foundation-->
+    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/foundation.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="/stylesheets/all_custom.css">
+</head>
+
+<body id="layout_dash">
+<!--Container-->
+<div class="row column expanded no-padding no-margin">
+    <!--SideBar-->
+    <div id="sidebar" class="small-12 medium-3 large-2 columns">
+        <ul class="vertical menu" data-accordion-menu>
+            <li id="image_holder" class="sidebar-menu-list">
+                <img src="/images/strawhat.jpg">
+                <p>NM3221</p>
+            </li>
+            <li class="sidebar-menu-list">
+                <a href="/dashboard">
+                    <span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-list">
+                <a href="/dashboard/interactions">
+                    <span><i class="fa fa-comments" aria-hidden="true"></i></span>
+                    <span>Interactions</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-list">
+                <a href="#">
+                    <span><i class="fa fa-table" aria-hidden="true"></i></span>
+                    <span>Results</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-list">
+                <a href="/dashboard/api">
+                    <span><i class="fa fa-database" aria-hidden="true"></i></span>
+                    <span>API</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-list">
+                <a href="#">
+                    <span><i class="fa fa-power-off" aria-hidden="true"></i></span>
+                    <span>Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <div id="content" class="small-12 medium-9 large-10 columns">
+        <!--Main Header-->
+        <div id="dash-title" class="row">
+            <div class="medium-12 columns">
+                <p>{{page_title}}</p>
+            </div>
+        </div>
+
+        {{{body}}}
+    </div>
+</div>
+
+    <!--Foundation-->
+    <script src="/node_modules/foundation-sites/vendor/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/foundation-sites/.customizer/js/vendor/foundation.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        });
+    </script>
+</body>
+
+</html>
