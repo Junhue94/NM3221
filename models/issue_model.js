@@ -17,7 +17,7 @@ var IssueSchema = mongoose.Schema({
     }],
     accepted: {
         type: String,
-        default: 'checked'
+        default: ''
     },
     timestamp: {
         type: Date
@@ -55,5 +55,11 @@ module.exports.issue_fn = {
             {$push: {message: message_id}},
             callback
         )
+    },
+
+    updateAccepted: function (issue_id, accepted_value, callback) {
+        var query = {_id: issue_id};
+        var update = {$set: {accepted: accepted_value}};
+        Issue.update(query, update, callback);
     }
 };

@@ -1,0 +1,43 @@
+<header id="dash-results">
+    <div class="row new-container">
+        <div class="medium-12 columns table-scroll">
+            <!--Search Bar-->
+            <input class="search-bar search" type="text" placeholder="Search here...">
+
+
+            <table>
+                <thead>
+                <tr>
+                    <th class="sort" data-sort="matric-no">MATRIC NO
+                        <span class="float-right"><i class="fa fa-sort" aria-hidden="true"></i></span>
+                    </th>
+                    <th class="sort" data-sort="username">NAME
+                        <span class="float-right"><i class="fa fa-sort" aria-hidden="true"></i></span>
+                    </th>
+                    {{#each date_list}}
+                        <th>{{this}}</th>
+                    {{/each}}
+                    <th class="sort" data-sort="total">TOTAL
+                        <span class="float-right"><i class="fa fa-sort" aria-hidden="true"></i></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="list">
+                {{#each student}}
+                <tr>
+                    <td class="matric-no">{{matric_no}}</td>
+                    <td class="username">{{username}}</td>
+                {{#each date}}
+                    <td>{{this}}</td>
+                {{/each}}
+                    <td class="total">{{total}}</td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</header>
+
+<script src="/node_modules/list.js/dist/list.js"></script>
+<script src="/js/listJS/dash_results.js"></script>

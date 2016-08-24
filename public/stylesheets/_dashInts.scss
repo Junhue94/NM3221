@@ -2,14 +2,20 @@
     .callout {
         margin: 10px 0;
         padding: 10px;
+        background: transparent;
+        border: 2px solid #b6b6b6;
+        border-radius: 5px;
     }
 
     .callout:hover {
         cursor: pointer;
+        background: rgba(255, 255, 255, 0.18);
+        color: black;
     }
 
     p {
         font-weight: bold;
         font-size: 0.9rem;
+        color: white;
     }
 }

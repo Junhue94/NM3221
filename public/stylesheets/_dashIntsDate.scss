@@ -1,0 +1,154 @@
+#dash-ints-date {
+    .flash-success {
+        margin: 3px 0 0 0;
+        padding: 10px;
+        background: #e8ffdd;
+        border: 1px solid #c4ffb3;
+        border-radius: 5px;
+
+        p {
+            margin: 0;
+            color: #067c00;
+            font-size: 1rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        div {
+            position: absolute;
+            color: #8a8a8a;
+            right: 1rem;
+            top: 0.7rem;
+            cursor: pointer;
+
+            i {
+                font-size: 1rem;
+                color: #ff9392;
+            }
+
+            i:hover {
+                color: red;
+            }
+        }
+    }
+
+    ul {
+        margin: 10px 0;
+        background: transparent;
+
+        li {
+            a:hover {
+                color: #ffffff;
+                background: rgba(255, 255, 255, 0.08);
+                border: 2px solid #bcbcbc;
+            }
+
+            a:before {
+                content: none;
+            }
+
+            a.accordion-title::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                border: inset 6px;
+                border-color: #00fff6 transparent transparent;
+                border-top-style: solid;
+                border-bottom-width: 0;
+                position: absolute;
+                top: 50%;
+                margin: -4px;
+                right: 1rem;
+            }
+
+            a[aria-expanded='true'].accordion-title::after {
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                -webkit-transform: scaleY(-1);
+                -ms-transform: scaleY(-1);
+                transform: scaleY(-1);
+            }
+
+            .accordion-title {
+                padding: 10px;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                border: 2px white solid;
+                color: white;
+                background: transparent;
+            }
+
+            div.accordion-content {
+                background: transparent;
+                border: 2px solid white;
+
+                table {
+                    margin: 0;
+
+                    thead {
+                        background: transparent;
+                        border: 1px solid white;
+
+                        tr {
+                            background: transparent;
+
+                            th {
+                                background: transparent;
+                                border: 1px solid white;
+                                color: white;
+                                font-size: 0.9rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        background: transparent;
+                        border: 1px solid white;
+
+                        tr {
+                            background: transparent;
+
+                            td {
+                                background: transparent;
+                                border: 1px solid white;
+                                padding: 4px 10px;
+
+                                label {
+                                    color: white;
+                                    font-size: 0.8rem;
+                                    text-align: justify;
+                                }
+
+                                button {
+                                    margin: 5px 0;
+                                    padding: 5px;
+                                    width: 100%;
+                                    font-weight: bold;
+                                    border-radius: 5px;
+                                    color: black;
+                                    background: #8efff3;
+                                }
+
+                                button:hover {
+                                    background: #02fff5;
+                                }
+
+                                .checkMessage {
+                                    text-align: center;
+
+                                    input {
+                                        vertical-align: middle;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

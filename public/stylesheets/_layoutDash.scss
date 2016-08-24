@@ -11,18 +11,27 @@
         padding: 5px;
 
         ul {
-            .sidebar-menu-list {
+            .sidebar-menu-list, #image_holder.sidebar-menu-list:hover {
                 background-color: transparent;
-                border: 1px solid whitesmoke;
+                border: 2px solid rgb(175, 175, 175);
                 border-radius: 5px;
 
                 a {
-                    color: #fffcdf;
+                    color: #ffffff;
+                }
+
+                a:hover {
+                    color: #8dfffc;
                 }
 
                 a:after {
                     border-color: #fffcdf transparent transparent;
                 }
+            }
+
+            .sidebar-menu-list:hover {
+                background-color: rgba(255, 255, 255, 0.14);
+                border: 2px solid rgb(0, 254, 255);
             }
 
             li#image_holder{
@@ -61,7 +70,7 @@
 
         #dash-title {
             margin: 3px 0 0 0;
-            border: 1px solid white;
+            border: 2px solid #60ff64;
             border-radius: 5px;
 
             .columns {
@@ -70,7 +79,9 @@
 
             p {
                 margin: 0;
-                color: white;
+                color: #b5ffa9;
+                font-weight: bold;
+                font-size: 1.2rem;
             }
         }
     }

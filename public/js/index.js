@@ -68,9 +68,9 @@ $(document).ready(function () {
                 required: true
             },
             'user-matric-no': {
-                required: true
-                /*minlength: 8,
-                maxlength: 8*/
+                required: true,
+                minlength: 8,
+                maxlength: 8
             }
         },
         messages: {
@@ -78,9 +78,9 @@ $(document).ready(function () {
                 required: "Name is required"
             },
             'user-matric-no': {
-                required: "Matric No. is required"
-                /*minlength: "Matric No. must be exactly 8 characters long",
-                maxlength: "Matric No. must be exactly 8 characters long"*/
+                required: "Matric No. is required",
+                minlength: "Matric No. must be exactly 8 characters long",
+                maxlength: "Matric No. must be exactly 8 characters long"
             }
         },
         submitHandler: function () {

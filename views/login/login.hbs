@@ -1,0 +1,43 @@
+<header id="user-login-window">
+    <div class="row column expanded">
+        <!--User Login-->
+        <div class="center-div">
+            <div class="row expanded">
+                <div class="small-12 medium-6 large-4 medium-centered columns">
+                    <div class="callout">
+                        <p>User Login</p>
+                    </div>
+                </div>
+            </div>
+
+            {{#if error}}
+                <div class="row expanded">
+                    <div class="small-12 medium-6 large-4 medium-centered columns">
+                        <div class="callout login-err">
+                            <p>{{error}}</p>
+                        </div>
+                    </div>
+                </div> <!--End Row-->
+            {{/if}}
+
+            <div class="row expanded">
+                <div class="small-12 medium-6 large-4 medium-centered columns">
+                    <form method="post" action="/login">
+                        <div class="callout">
+                            <label>Username
+                                <input name="user-name" type="password" autocomplete="off">
+                            </label>
+                            <label>Password
+                                <input name="user-password" type="password" autocomplete="off">
+                            </label>
+                            <button class="button" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Socket IO-->
+<script src="/socket.io/socket.io.js"></script>

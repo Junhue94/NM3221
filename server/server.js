@@ -10,6 +10,7 @@ var morgan = require('morgan');  // For HTTP request logging
 var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');  // Handle only JSON and URL-encoded submission
+var passport = require('passport');
 var mongoose = require('mongoose');
 var routes = require('./routes');
 
@@ -73,13 +74,15 @@ app.use(morgan('dev'));
 // Express Session
 // Use cookies to keep track users. Thus, must be use after cookieParser
 app.use(session({
-    secret: 'theseedoffuture', // used to sign the session ID cookie
+    secret: 'nm3221', // used to sign the session ID cookie
     saveUninitialized: true, // forces a session that is "uninitialized" to be saved to the store
     resave: true // forces the session to be saved back to the session store, even if the session was never modified during the request
 }));
 
 app.use(flash());
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Global Vars
 // This middleware will be executed for every request to the app
@@ -87,6 +90,7 @@ app.use(flash());
 app.use(function (req, res, next) {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     // Put user into res.locals for easy access from templates
     res.locals.user = req.user || null;
     next();

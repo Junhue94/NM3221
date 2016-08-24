@@ -1,0 +1,40 @@
+#dash-results {
+    .search-bar {
+        margin: 0 0 12px 0;
+        padding: 4px 8px;
+        border-radius: 5px;
+    }
+
+    table {
+        margin: 0;
+        width: 100%;
+
+        thead {
+            background: transparent;
+
+            tr {
+                background: transparent;
+
+                th {
+                    color: white;
+                    border: 1px solid white;
+                    text-align: center;
+                }
+            }
+        }
+
+        tbody {
+            background: transparent;
+
+            tr {
+                background: transparent;
+
+                td {
+                    color: white;
+                    border: 1px solid white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -16,6 +16,7 @@
   "homepage": "https://github.com/Junhue94/NM3221#readme",
   "dependencies": {
     "async": "^2.0.1",
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
@@ -26,11 +27,15 @@
     "foundation-sites": "^6.2.3",
     "jquery": "^3.1.0",
     "jquery-validation": "^1.15.1",
+    "list.js": "^1.2.0",
     "mongodb": "^2.2.6",
     "mongoose": "^4.5.9",
     "morgan": "^1.7.0",
     "nodemon": "^1.10.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "serve-favicon": "^2.3.0",
-    "socket.io": "^1.4.8"
+    "socket.io": "^1.4.8",
+    "underscore": "^1.8.3"
   }
 }

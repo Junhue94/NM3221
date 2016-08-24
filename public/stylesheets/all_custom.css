@@ -12,14 +12,19 @@
   margin: 0; }
 #layout_dash #sidebar {
   padding: 5px; }
-  #layout_dash #sidebar ul .sidebar-menu-list {
+  #layout_dash #sidebar ul .sidebar-menu-list, #layout_dash #sidebar ul #image_holder.sidebar-menu-list:hover {
     background-color: transparent;
-    border: 1px solid whitesmoke;
+    border: 2px solid #afafaf;
     border-radius: 5px; }
-    #layout_dash #sidebar ul .sidebar-menu-list a {
-      color: #fffcdf; }
-    #layout_dash #sidebar ul .sidebar-menu-list a:after {
+    #layout_dash #sidebar ul .sidebar-menu-list a, #layout_dash #sidebar ul #image_holder.sidebar-menu-list:hover a {
+      color: #ffffff; }
+    #layout_dash #sidebar ul .sidebar-menu-list a:hover, #layout_dash #sidebar ul #image_holder.sidebar-menu-list:hover a:hover {
+      color: #8dfffc; }
+    #layout_dash #sidebar ul .sidebar-menu-list a:after, #layout_dash #sidebar ul #image_holder.sidebar-menu-list:hover a:after {
       border-color: #fffcdf transparent transparent; }
+  #layout_dash #sidebar ul .sidebar-menu-list:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 2px solid #00feff; }
   #layout_dash #sidebar ul li#image_holder {
     text-align: center; }
     #layout_dash #sidebar ul li#image_holder img {
@@ -41,13 +46,15 @@
   padding: 5px; }
   #layout_dash #content #dash-title {
     margin: 3px 0 0 0;
-    border: 1px solid white;
+    border: 2px solid #60ff64;
     border-radius: 5px; }
     #layout_dash #content #dash-title .columns {
       padding: 10px; }
     #layout_dash #content #dash-title p {
       margin: 0;
-      color: white; }
+      color: #b5ffa9;
+      font-weight: bold;
+      font-size: 1.2rem; }
 
 #chat-container {
   padding: 30px 0; }
@@ -247,19 +254,243 @@
 
 #dash-ints .callout {
   margin: 10px 0;
-  padding: 10px; }
+  padding: 10px;
+  background: transparent;
+  border: 2px solid #b6b6b6;
+  border-radius: 5px; }
 #dash-ints .callout:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.18);
+  color: black; }
 #dash-ints p {
   font-weight: bold;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  color: white; }
+
+#dash-ints-date .flash-success {
+  margin: 3px 0 0 0;
+  padding: 10px;
+  background: #e8ffdd;
+  border: 1px solid #c4ffb3;
+  border-radius: 5px; }
+  #dash-ints-date .flash-success p {
+    margin: 0;
+    color: #067c00;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic; }
+  #dash-ints-date .flash-success div {
+    position: absolute;
+    color: #8a8a8a;
+    right: 1rem;
+    top: 0.7rem;
+    cursor: pointer; }
+    #dash-ints-date .flash-success div i {
+      font-size: 1rem;
+      color: #ff9392; }
+    #dash-ints-date .flash-success div i:hover {
+      color: red; }
+#dash-ints-date ul {
+  margin: 10px 0;
+  background: transparent; }
+  #dash-ints-date ul li a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid #bcbcbc; }
+  #dash-ints-date ul li a:before {
+    content: none; }
+  #dash-ints-date ul li a.accordion-title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    border-color: #00fff6 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    position: absolute;
+    top: 50%;
+    margin: -4px;
+    right: 1rem; }
+  #dash-ints-date ul li a[aria-expanded='true'].accordion-title::after {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    transform: scaleY(-1); }
+  #dash-ints-date ul li .accordion-title {
+    padding: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border: 2px white solid;
+    color: white;
+    background: transparent; }
+  #dash-ints-date ul li div.accordion-content {
+    background: transparent;
+    border: 2px solid white; }
+    #dash-ints-date ul li div.accordion-content table {
+      margin: 0; }
+      #dash-ints-date ul li div.accordion-content table thead {
+        background: transparent;
+        border: 1px solid white; }
+        #dash-ints-date ul li div.accordion-content table thead tr {
+          background: transparent; }
+          #dash-ints-date ul li div.accordion-content table thead tr th {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            font-size: 0.9rem;
+            text-align: center; }
+      #dash-ints-date ul li div.accordion-content table tbody {
+        background: transparent;
+        border: 1px solid white; }
+        #dash-ints-date ul li div.accordion-content table tbody tr {
+          background: transparent; }
+          #dash-ints-date ul li div.accordion-content table tbody tr td {
+            background: transparent;
+            border: 1px solid white;
+            padding: 4px 10px; }
+            #dash-ints-date ul li div.accordion-content table tbody tr td label {
+              color: white;
+              font-size: 0.8rem;
+              text-align: justify; }
+            #dash-ints-date ul li div.accordion-content table tbody tr td button {
+              margin: 5px 0;
+              padding: 5px;
+              width: 100%;
+              font-weight: bold;
+              border-radius: 5px;
+              color: black;
+              background: #8efff3; }
+            #dash-ints-date ul li div.accordion-content table tbody tr td button:hover {
+              background: #02fff5; }
+            #dash-ints-date ul li div.accordion-content table tbody tr td .checkMessage {
+              text-align: center; }
+              #dash-ints-date ul li div.accordion-content table tbody tr td .checkMessage input {
+                vertical-align: middle;
+                margin: 0; }
+
+#dash-results .search-bar {
+  margin: 0 0 12px 0;
+  padding: 4px 8px;
+  border-radius: 5px; }
+#dash-results table {
+  margin: 0;
+  width: 100%; }
+  #dash-results table thead {
+    background: transparent; }
+    #dash-results table thead tr {
+      background: transparent; }
+      #dash-results table thead tr th {
+        color: white;
+        border: 1px solid white;
+        text-align: center; }
+  #dash-results table tbody {
+    background: transparent; }
+    #dash-results table tbody tr {
+      background: transparent; }
+      #dash-results table tbody tr td {
+        color: white;
+        border: 1px solid white;
+        text-align: center; }
+
+#user-login-window .center-div {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+#user-login-window .callout {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem; }
+#user-login-window .callout.login-err {
+  padding: 8px;
+  border: 1px solid #ff5658;
+  color: #ff5658;
+  font-size: 1rem;
+  font-weight: normal; }
+#user-login-window label {
+  color: white;
+  text-align: left;
+  font-size: 1rem; }
+  #user-login-window label input {
+    padding: 5px 8px;
+    height: 100%;
+    background: transparent;
+    color: white;
+    border-radius: 5px; }
+#user-login-window button {
+  width: 100%;
+  border-radius: 5px;
+  background: #b4feff;
+  color: black; }
+#user-login-window button:hover {
+  background: #00fff5; }
 
 .new-container {
   margin: 3px 0 0 0;
-  border: 1px solid white;
+  border: 2px solid #75b0ff;
   border-radius: 5px; }
   .new-container .columns {
     padding: 10px; }
+
+#reg-form .columns {
+  padding: 20px; }
+#reg-form .flash-success {
+  margin: 0 0 16px 0;
+  padding: 10px;
+  background: #e8ffdd;
+  border: 1px solid #c4ffb3;
+  border-radius: 5px; }
+  #reg-form .flash-success p {
+    margin: 0;
+    color: #067c00;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic; }
+  #reg-form .flash-success div {
+    position: absolute;
+    color: #8a8a8a;
+    right: 1rem;
+    top: 0.7rem;
+    cursor: pointer; }
+    #reg-form .flash-success div i {
+      font-size: 1rem;
+      color: #ff9392; }
+    #reg-form .flash-success div i:hover {
+      color: red; }
+#reg-form label {
+  color: #fdffb6;
+  font-size: 1.2rem;
+  margin: 0 0 16px 0; }
+  #reg-form label input {
+    margin: 0;
+    height: 100%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal; }
+  #reg-form label .error {
+    color: #ff7675;
+    font-size: 0.9rem;
+    font-style: italic; }
+#reg-form button {
+  width: 100%;
+  background: #98e1d9;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold; }
+#reg-form button:hover {
+  background: #00ffee; }
 
 #error_page .columns {
   padding: 20px 10px; }

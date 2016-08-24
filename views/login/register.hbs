@@ -1,0 +1,41 @@
+<header id="reg-form">
+
+
+
+
+
+    <div class="row expanded">
+        <div class="medium-6 columns">
+            {{#if success_msg}}
+            <div class="callout flash-success" data-closable>
+                <p>{{success_msg}}</p>
+                <div aria-label="Dismiss alert" type="button" data-close aria-hidden="true">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            {{/if}}
+
+            <form id="user-reg-form" action="/login/register" method="post">
+                <label>Username
+                    <input id="username" name="username" type="text" autocomplete="off">
+                </label>
+                <label>Password
+                    <input id="password" name="password" type="password" autocomplete="off">
+                </label>
+                <label>Confirm Password
+                    <input id="repassword" name="repassword" type="password" autocomplete="off">
+                </label>
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<!--Jquery-->
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<!--Jquery Validation-->
+<script src="/node_modules/jquery-validation/dist/jquery.validate.js"></script>
+<!--Socket IO-->
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="/js/reg_validate.js"></script>

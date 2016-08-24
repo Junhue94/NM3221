@@ -1,1 +1,70 @@
-dasdasd
+<header id="dash-ints-date">
+    <!--Flash Message-->
+    {{#if success_msg}}
+        <div class="row">
+            <div class="medium-12 columns callout flash-success" data-closable>
+                <p>{{success_msg}}</p>
+                <div aria-label="Dismiss alert" type="button" data-close aria-hidden="true">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+
+
+    <div class="row new-container">
+        <div class="medium-12 columns">
+            <form action="/dashboard/interactions/{{dateParams}}" method="post">
+            {{#each data_issue}}
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">{{issue}}</a>
+                        <div class="accordion-content" data-tab-content>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Messages</th>
+                                    <th>Checkbox</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!--Issue-->
+                                    <tr>
+                                        <td>
+                                            <label for="{{_id}}">{{issue}}</label>
+                                        </td>
+                                        <td>
+                                            <div class="checkMessage">
+                                                <input id="{{_id}}" name="checkbox-accepted" value="{{_id}}" type="checkbox" {{accepted}}>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <!--Message in Issue-->
+                                {{#each message}}
+                                    <tr>
+                                        <td>
+                                            <label for="{{_id}}">{{message}}</label>
+                                        </td>
+                                        <td>
+                                            <div class="checkMessage">
+                                                <input id="{{_id}}" name="checkbox-accepted" value="{{_id}}" type="checkbox" {{accepted}}>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                                <!--Update Changes  -->
+                                    <tr>
+                                       <td colspan="2">
+                                           <button class="button" type="submit">Update</button>
+                                       </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            {{/each}}
+            </form>
+        </div>
+    </div>
+</header>

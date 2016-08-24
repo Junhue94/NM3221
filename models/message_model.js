@@ -13,7 +13,7 @@ var MessageSchema = mongoose.Schema({
     },
     accepted: {
         type: String,
-        default: 'checked'
+        default: ''
     },
     timestamp: {
         type: Date
@@ -36,5 +36,11 @@ module.exports.message_fn = {
 
     getAllMessages: function (callback) {
         Message.find(callback);
+    },
+
+    updateAccepted: function (message_id, accepted_value, callback) {
+        var query = {_id: message_id};
+        var update = {$set: {accepted: accepted_value}};
+        Message.update(query, update, callback);
     }
 };
