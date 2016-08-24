@@ -83,7 +83,7 @@ var returnRouter = function (io) {
     );
 
     // User Registration
-    router.get('/register', function (req, res, next) {
+    /*router.get('/register', function (req, res, next) {
         res.render('login/register', {
             layout: 'main',
             title: 'User Registration'
@@ -104,7 +104,7 @@ var returnRouter = function (io) {
             req.flash('success_msg', 'User Created!');
             res.redirect('/login/register');
         });
-    });
+    });*/
 
     return router;
 };
