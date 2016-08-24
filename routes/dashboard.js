@@ -228,7 +228,7 @@ var returnRouter = function (io) {
                 });
                 var issue_score = issue_score_filter.length;
                 // Score added to issue Creator
-                matric_date[dateString_1] += (issue_score + 1);
+                matric_date[dateString_1] += issue_score;
 
                 // Score added for Message Creator for this Issue
                 for (var msg_index = 0; msg_index < issue_score_filter.length; msg_index++) {
