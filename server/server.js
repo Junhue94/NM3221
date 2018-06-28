@@ -29,7 +29,7 @@ mongoose.Promise = global.Promise;
 if (app.get('env') === 'development') {
     mongoose.connect('mongodb://localhost/nm3221');
 } else {
-    mongoose.connect('mongodb://jycircles:zx55878@ds161175.mlab.com:61175/nm3221');
+    mongoose.connect('mongodb://username:password@ds161175.mlab.com:61175/nm3221');
 }
 
 // Test Database Connection
